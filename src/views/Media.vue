@@ -11,7 +11,7 @@
             </v-card-text>
           </v-card>
         </v-flex>
-        <v-flex lg4 sm12 v-for="(item,index) in items" :key="item.id">
+        <v-flex lg4 sm12 v-for="item in items" :key="item.id">
           <v-card color="white">
             <v-layout row justify-space-between class="ma-0">
               <v-flex xs2>

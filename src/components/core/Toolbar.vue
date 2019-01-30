@@ -147,9 +147,9 @@
       {{ result }}
     </v-snackbar>
 
-    <!-- <v-btn icon href="https://github.com/fatihunlu" :ripple="false">
+    <v-btn icon href="https://github.com/XDevelopers" :ripple="false">
       <v-icon medium>fab fa-github</v-icon>
-    </v-btn> -->
+    </v-btn>
     
     <!-- Icon calls notifications -->
     <!-- <v-menu offset-y origin="center center" :nudge-bottom="10" transition="scale-transition">
@@ -312,8 +312,7 @@ export default {
     toggleNavigationBar() {
       const vm = this;
 
-      vm.$emit('toggleNavigationBar');
-      console.log('toggleNavigationBar');
+      vm.$emit('toggleNavigationBar');      
     },
 
     setUpSettings() {

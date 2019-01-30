@@ -120,16 +120,8 @@ export default {
   },
   computed: {
     togglePassed() {
-      console.log('clearToggle');
       let vm = this;
-      console.log(`toggle:${vm.toggle}`); 
       return vm.toggle;
-      // if (vm.toggle){
-      //   return false;
-      // }
-      // else{
-      //   return true;
-      // }
     }
   },
 
@@ -147,9 +139,7 @@ export default {
     toggleNavigation() {
       const vm = this;
 
-      vm.$emit('toggleNavigation');
       vm.$emit('toggleNavigationBar');
-      console.log('toggleNavigation');
     },
 
     changeRoute(routeName, selectedIndex) {
@@ -190,7 +180,7 @@ export default {
   }
   .v-navigation-drawer,
   aside.v-navigation-drawer {
-    height: unset !important;
+    /* height: unset !important; */
     max-height: unset !important;
   }
 </style>
