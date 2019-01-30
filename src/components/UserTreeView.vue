@@ -86,7 +86,7 @@
     '?accessoriesType=Kurt&avatarStyle=Circle&clotheColor=Gray01&clotheType=BlazerShirt&eyeType=Surprised&eyebrowType=Default&facialHairColor=Red&facialHairType=Blank&graphicType=Selena&hairColor=Red&hatColor=Blue02&mouthType=Twinkle&skinColor=Pale&topType=LongHairCurly'
   ]
 
-  const pause = ms => new Promise(resolve => setTimeout(resolve, ms))
+  //const pause = ms => new Promise(resolve => setTimeout(resolve, ms))
 
   export default {
     data: () => ({

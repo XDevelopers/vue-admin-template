@@ -1,5 +1,6 @@
 <template>
-  <v-card>
+  <v-card
+    class="elevation-2">
     <v-card-text class="pa-0">
       <pie-chart :data="data" legend="bottom" :colors="['#d11', '#112', '#23f', '#45a']"></pie-chart>
     </v-card-text>

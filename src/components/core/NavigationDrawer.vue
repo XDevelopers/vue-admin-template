@@ -1,10 +1,9 @@
 <template>
   <v-navigation-drawer
-    v-model="toggle"
-    fixed app>
+    :value="togglePassed" fixed app @click="toggleNavigation" >
     <v-toolbar flat dark :color="$root.themeColor" class="toolbar">
       <router-link :to="{ name: 'Dashboard' }">
-        <img src="static/logo.png" width="36px"></img>
+        <img src="@/assets/logo.png" width="36px" />
       </router-link>
       <router-link :to="{ name: 'Dashboard' }" class="text">
          Vue Admin Template
@@ -99,8 +98,7 @@
       </v-list-tile>
           <v-list-tile
             v-for="(admin, i) in admins"
-            :key="i"
-            @click="">
+            :key="i">
             <v-list-tile-action>
               <v-icon v-text="admin[1]"></v-icon>
             </v-list-tile-action>
@@ -120,6 +118,20 @@ export default {
         default: true
     }
   },
+  computed: {
+    togglePassed() {
+      console.log('clearToggle');
+      let vm = this;
+      console.log(`toggle:${vm.toggle}`); 
+      return vm.toggle;
+      // if (vm.toggle){
+      //   return false;
+      // }
+      // else{
+      //   return true;
+      // }
+    }
+  },
 
   data() {
     return {
@@ -132,6 +144,14 @@ export default {
   },
 
   methods: {
+    toggleNavigation() {
+      const vm = this;
+
+      vm.$emit('toggleNavigation');
+      vm.$emit('toggleNavigationBar');
+      console.log('toggleNavigation');
+    },
+
     changeRoute(routeName, selectedIndex) {
       const vm = this;
 
@@ -139,6 +159,7 @@ export default {
 
       return vm.$router.push({ name: routeName });
     }
+
   }
 }
 </script>
@@ -166,5 +187,10 @@ export default {
 
   .active {
     font-weight: bold;
+  }
+  .v-navigation-drawer,
+  aside.v-navigation-drawer {
+    height: unset !important;
+    max-height: unset !important;
   }
 </style>

@@ -4,12 +4,15 @@
       <v-app id="inspire">
         <div class="app-container">
           <toolbar @toggleNavigationBar="drawer = !drawer"/>
-          <navigation :toggle="drawer"/>
+          <navigation :toggle="drawer" />
+          <!-- <navigation @click="toggleClick(drawer)" /> -->
+          <!-- Main Content -->          
           <v-content>
             <breadcrumbs />
             <router-view/>
             <page-footer />
           </v-content>
+          <!-- / Main Content -->
         </div>
       </v-app>
     </template>

@@ -3,24 +3,29 @@
     dark
     app
     :color="$root.themeColor">
+    <!-- Sanduich Menu -->
     <v-toolbar-title>
       <v-toolbar-side-icon @click="toggleNavigationBar"></v-toolbar-side-icon>
     </v-toolbar-title>
+    <!-- / Sanduich Menu -->
+
     <v-text-field
+      class="flex lg3 sm6 xs6"
       flat
       solo-inverted
       append-icon="search"
       label="Search">
     </v-text-field>
     <v-spacer></v-spacer>
-    <v-rating
+    <!-- <v-rating
         v-model="rating"
         background-color="white"
         medium
         :ripple="false"
         color="white"
-        dense />
-
+        dense /> -->
+    
+    <!-- Icon that calls modal -->    
     <v-dialog
       v-model="dialog"
       width="500">
@@ -50,6 +55,7 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
+    <!-- / Icon that calls modal -->
 
     <v-dialog
       v-model="dialogSettings"
@@ -141,10 +147,12 @@
       {{ result }}
     </v-snackbar>
 
-    <v-btn icon href="https://github.com/fatihunlu" :ripple="false">
+    <!-- <v-btn icon href="https://github.com/fatihunlu" :ripple="false">
       <v-icon medium>fab fa-github</v-icon>
-    </v-btn>
-    <v-menu offset-y origin="center center" :nudge-bottom="10" transition="scale-transition">
+    </v-btn> -->
+    
+    <!-- Icon calls notifications -->
+    <!-- <v-menu offset-y origin="center center" :nudge-bottom="10" transition="scale-transition">
 
       <v-btn icon flat slot="activator" @click="notifications.map(x => x.isActive = false)">
         <v-badge color="green" overlap>
@@ -163,7 +171,7 @@
           <v-list two-line class="pa-0">
           <template v-for="(item, index) in notifications">
             <v-divider :key="index" />
-            <v-list-tile avatar :key="item.title" @click.parent="item.onClick">
+            <v-list-tile avatar :key="item.title" @click="item.onClick">
             <v-list-tile-avatar :color="item.color">
               <v-icon dark>{{item.icon}}</v-icon>
             </v-list-tile-avatar>
@@ -181,7 +189,8 @@
           <v-divider></v-divider>
         </v-card-text>
       </v-card>
-    </v-menu>
+    </v-menu> -->
+    <!-- Icon calls notifications -->
 
     <v-menu offset-y origin="center center" :nudge-bottom="10" transition="scale-transition">
       <v-btn icon large flat slot="activator" :ripple="false">
@@ -208,6 +217,7 @@
         </v-list-tile>
       </v-list>
     </v-menu>
+
   </v-toolbar>
 </template>
 <script>
@@ -232,7 +242,7 @@ export default {
           icon: 'account_circle',
           href: '#',
           title: 'Profile',
-          click: (e) => {
+          click: () => {
           }
         },
         {
@@ -303,6 +313,7 @@ export default {
       const vm = this;
 
       vm.$emit('toggleNavigationBar');
+      console.log('toggleNavigationBar');
     },
 
     setUpSettings() {
@@ -336,3 +347,8 @@ export default {
   }
 };
 </script>
+<style>
+.v-input__slot {
+  margin-bottom: 0px !important;
+}
+</style>

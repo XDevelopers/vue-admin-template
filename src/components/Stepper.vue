@@ -134,9 +134,8 @@
 
     methods: {
       submit () {
-        if (this.$refs.form.validate()) {
-
-        }
+        // if (this.$refs.form.validate()) {
+        // }
 
         this.step = 2;
       },

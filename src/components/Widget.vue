@@ -1,6 +1,6 @@
 <template>
   <v-card class="widget-card">
-    <v-card-text class="pa-0">
+    <v-card-text class="pa-0 elevation-2">
       <v-container class="pa-0">
         <div class="layout row ma-0" :style="{ backgroundColor: color }">
           <div class="sm4 xs4 flex">

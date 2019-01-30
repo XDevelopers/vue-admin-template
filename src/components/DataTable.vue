@@ -1,6 +1,6 @@
 <template>
   <v-data-table
-    class="table"
+    class="elevation-2 table"
     :headers="headers"
     :items="users"
     :rows-per-page-items="[10, 25]">
@@ -108,5 +108,9 @@ export default {
     border: 1px solid rgba(0, 0, 0, 0.125);
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.21);
     background-color: transparent;
+    padding: 10px;
+  }
+  .v-card__text {
+    padding: 0px 0px !important;
   }
 </style>

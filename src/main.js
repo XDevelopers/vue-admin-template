@@ -1,8 +1,9 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue';
-import App from './App';
-import router from './router';
+import Vue from 'vue'
+import './plugins/vuetify'
+import App from './App.vue'
+import router from './routes/index'
+import store from './store/index'
+import './registerServiceWorker'
 
 import 'vuetify/dist/vuetify.min.css';
 import 'font-awesome/css/font-awesome.css';
@@ -33,17 +34,16 @@ setupComponents(Vue);
 
 Vue.use(Vuetify);
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
-/* eslint-disable no-new */
 new Vue({
-  el: '#app',
   router,
+  store,
   components: { App },
-  template: '<App/>',
   data: {
     themeColor: '#1D2939',
-    userEmail: 'admin@yopmail.com',
+    userEmail: 'marcio@xdev.com.br',
     userPassword: '123456'
-  }
-})
+  },
+  render: h => h(App)
+}).$mount('#app')
