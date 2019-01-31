@@ -10,7 +10,7 @@ Vue Admin Template is a Vue.js Based Admin Template. This template uses the vuet
 
 ## Preview
 
-![Preview](https://github.com/fatihunlu/vue-admin-template/blob/master/static/template.gif)
+![Preview](https://github.com/XDevelopers/vue-admin-template/blob/master/public/img/icons/template.gif)
 
 
 ### Reference
